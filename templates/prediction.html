@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HerbID - Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css')}}">
+</head>
+
+<body>
+    <div class="form">
+    <div class="form-1">
+    <div class="form-2">
+    <h1>Prediction <br> of <br> Plant / Leaf species</h1>
+    <p>Predicted Label: {{ prediction }}</p>
+    <p>Accuracy: 90%</p>
+    <h2>Plant Descriptions:</h2>
+    <div class="actions">
+        <strong>Action:</strong> {{ plant_description.Action }}<br>
+        <strong>Ayurvedic name:</strong> {{ plant_description.Ayurvedic_names }}<br>
+        <strong>Dosage:</strong> {{ plant_description.Dosage }}<br>
+        <strong>Family:</strong> {{ plant_description.Family }}<br>
+        <strong>Habitat:</strong> {{ plant_description.Habitat }}<br>
+        <strong>Siddha_Tamil:</strong> {{ plant_description.Siddha_Tamil }}<br>
+        <strong>Unani:</strong> {{ plant_description.Unani }}<br>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

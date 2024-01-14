@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Font Awesome Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='forgot.css')}}">
+
+    <title>HerbID - Forgot Password</title>
+
+</head>
+<body>
+   
+    <div class="box-form">
+    <div class="left">
+    <div class="overlay">
+            <div class="content">
+              <h1>Forgot Password ?</h1>
+              <p style="font-size:large">You can reset your password here</p><br><br>
+            <form action="/verification">
+              <label style="font-size:large">Enter your phone number :</label><br><br>
+               <input type="number" id="phone" name="phone" size="10" placeholder="Phone number" required style="color:rgb(0, 0, 0);font-size: 16px;
+              padding: 10px 25px;
+              border-radius: 10px;
+              display: inline-block; 
+              border:0;
+              outline:0;
+              width: 350px;
+              box-shadow: 0px 4px 20px 0px ;"> <br> <br> <br>
+             <input type="submit" style="
+             color: #fff;
+             font-size: 16px;
+             padding: 12px 35px;
+             border-radius: 50px;
+             display: inline-block;
+             border: 0;
+             outline: 0;
+             box-shadow: 0px 4px 20px 0px #49c628a6;
+             background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);" value="Send OTP">
+            </form> 
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>

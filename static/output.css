@@ -1,0 +1,46 @@
+ body {
+  margin:20px;
+  background-image: linear-gradient(135deg, #DAF7A6 10%, #145A32 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+  }
+  h1{
+    font-size: 4vmax;
+    color:white;
+  }
+  .form{
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 6px #096f1385;
+    text-align: center;
+    height: 900px;
+    font-size:x-large;
+  }
+  .form .form-1 {
+    color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/static/The-Benefits-of-Fresh-Herbs_Header_800x550.jpg);
+    overflow: hidden;
+    height:100%;
+  }
+  .form .form-1 .form-2{
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background: #266732ad;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .actions{
+    text-align: left;
+  }
+
+

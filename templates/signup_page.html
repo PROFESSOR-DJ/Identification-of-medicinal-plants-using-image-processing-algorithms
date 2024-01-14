@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HerbID - Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup_page.css')}}" />
+  </head>
+  <body>
+    <div class="box-form">
+        <div class="left">
+            <div class="overlay">
+            <h1>HerbID</h1>
+            <p style="text-align:center;">Unlocking nature's healing secrets</p>
+            <div class="img">
+            <img src="/static/Animation - 1697688835239.gif">
+            </div>
+            <br><br><br><br><br>
+            <p style="text-align:center;font-size:20px;">Welcome to HerbID:<br>
+                Your Gateway to the World of Ayurvedic Healing! <br> Explore our comprehensive database of herbs and plants,<br> and unlock the secrets of traditional Ayurvedic remedies.<br> Identify, learn, and harness the power of<br> nature's healing treasures for a healthier, more balanced life.</p>
+            </div>
+        </div>
+        <div class="right">    
+    <section class="container">
+      <header>Sign up</header>
+      <form action="/home_page" class="form" id="signup-form" method="post">
+        <div class="column">
+        <div class="input-box">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter first name" id="first_name" required/>
+        </div>
+        <div class="input-box">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter last name" id="last_name" required />
+          </div>
+        </div>
+        <div class="input-box">
+            <label>Password</label>
+            <input type="password" placeholder="Enter password" id="password" required />
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" id="email" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" id="phone_number" required />
+          </div>
+          <div class="input-box">
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" id="birth_date" required />
+          </div>
+        </div>
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" id="gender_male" value="Male"/>
+              <label for="check-male">Male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" id="gender_female" value="Female" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" id="gender_other" value="Others" />
+              <label for="check-other">Others</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" id="street_address" required />
+          <input type="text" placeholder="Enter street address line 2" id="street_addressline2" required />
+          <div class="column">
+            <div class="select-box">
+              <select name="country" required>
+                <option hidden>Country</option>
+                <option>Afghanisthan</option>
+                <option>Algeria</option>
+                <option>Angola</option>
+                <option>Argentina</option>
+                <option>Australia</option>
+                <option>Azerbaijan</option>
+                <option>Bangladesh</option>
+                <option>Belgium</option>
+                <option>Benin</option>
+                <option>Bolivia</option>
+                <option>Brazil</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Côte d'Ivoire</option>
+                <option>Cambodia</option>
+                <option>Canada</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Colombia</option>
+                <option>Cuba</option>
+                <option>Czechia</option>
+                <option>Democratic Republic of the Congo</option>
+                <option>Dominican Republic</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>Ethiopia</option>
+                <option>France</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Greece</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Haiti</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Italy</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Mali</option>
+                <option>Mexico</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>North Korea</option>
+                <option>Pakistan</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Romania</option>
+                <option>Russia</option>
+                <option>Rwanda</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Korea</option>
+                <option>South Sudan</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Sweden</option>
+                <option>Syria</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Kingdom</option>
+                <option>United States of America</option>
+                <option>Uzbekistan</option>
+                <option>Venezuala</option>
+                <option>Vietnam</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" id="city" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" id="region" required />
+            <input type="number" placeholder="Enter postal code" id="postal_code" required />
+          </div>
+        </div>
+        <button type="submit">Signup</button>
+      </form>
+    </section>
+    </div>
+    </div>
+  </body>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+    import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDDDAXcx1cGGaHCjSV0XqUEjw5BQXIr1Hk",
+      authDomain: "new-login-a87ac.firebaseapp.com",
+      databaseURL: "https://new-login-a87ac-default-rtdb.firebaseio.com",
+      projectId: "new-login-a87ac",
+      storageBucket: "new-login-a87ac.appspot.com",
+      messagingSenderId: "1098381056692",
+      appId: "1:1098381056692:web:fb4dc43ce51fb21109d5e1",
+      measurementId: "G-H5GKBGPSEY"
+    };
+
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+
+    const signupForm = document.getElementById('signup-form');
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = signupForm.elements.email.value;
+      const password = signupForm.elements.password.value;
+
+      try {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+
+        const userData = {
+          firstName: signupForm.elements.first_name.value,
+          lastName: signupForm.elements.last_name.value,
+          email: email,
+          phone: signupForm.elements.phone_number.value,
+          birthDate: signupForm.elements.birth_date.value,
+          gender: signupForm.querySelector('input[name="gender"]:checked').value,
+          streetAddress: signupForm.elements.street_address.value,
+          streetAddressLine2: signupForm.elements.street_addressline2.value,
+          country: signupForm.elements.country.value,
+          city: signupForm.elements.city.value,
+          region: signupForm.elements.region.value,
+          postalCode: signupForm.elements.postal_code.value,
+        };
+
+        const userRef = ref(database, 'users/' + userCredential.user.uid);
+        set(userRef, userData);
+
+        alert('User registered successfully!');
+        window.location.href = "{{ url_for('home') }}";
+        // You can redirect to a different page down below or in this line.
+      } catch (error) {
+        alert('Error: ' + error.message);
+      }
+    });
+
+  </script>
+
+
+
+</html>

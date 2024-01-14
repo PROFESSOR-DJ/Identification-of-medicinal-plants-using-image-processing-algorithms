@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HerbID - Login</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='login_page.css')}}"
+    />
+  </head>
+  <body>
+    <div class="box-form">
+      <div class="left">
+        <div class="overlay">
+          <h1>HerbID</h1>
+          <p style="text-align: center">Unlocking nature's healing secrets</p>
+          <div class="img">
+            <img src="/static/Animation - 1697688835239.gif" />
+          </div>
+          <span>
+            <p style="text-align: center">Login with social media</p>
+            <a href="https://www.facebook.com/login/"
+              ><i class="fa fa-facebook" aria-hidden="true"></i
+            ></a>
+            <a
+              href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+              ><i class="fa fa-twitter" aria-hidden="true"></i
+            ></a>
+            <a href="https://accounts.google.com › signin"
+              ><i class="fa fa-google" aria-hidden="true"></i
+            ></a>
+          </span>
+        </div>
+      </div>
+      <div class="right">
+        <h5>Login</h5>
+        <form action="/home" id="form">
+          <div class="inputs">
+            <input type="text" placeholder="Email" id="email" required />
+            <br />
+            <input
+              type="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+          </div>
+          <br /><br />
+          <div class="forget-password">
+            <a href="{{ url_for('forgot') }}">Forgot password?</a>
+          </div>
+          <br /><br />
+          <p>
+            Don't have an account?
+            <a href="{{ url_for('signup') }}">Create your account</a> it takes just 2
+            minutes
+          </p>
+          <br />
+          <input
+            type="submit"
+            id="submit"
+            style="
+              float: right;
+              color: #fff;
+              font-size: 16px;
+              padding: 12px 35px;
+              border-radius: 50px;
+              display: inline-block;
+              border: 0;
+              outline: 0;
+              box-shadow: 0px 4px 20px 0px #49c628a6;
+              background-image: linear-gradient(
+                135deg,
+                #70f570 10%,
+                #49c628 100%
+              );
+            "
+            value="Login"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+    import {
+      getAuth,
+      createUserWithEmailAndPassword,
+    } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+    import {
+      getDatabase,
+      ref,
+      set,
+      get,
+      child,
+    } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDDDAXcx1cGGaHCjSV0XqUEjw5BQXIr1Hk",
+      authDomain: "new-login-a87ac.firebaseapp.com",
+      databaseURL: "https://new-login-a87ac-default-rtdb.firebaseio.com",
+      projectId: "new-login-a87ac",
+      storageBucket: "new-login-a87ac.appspot.com",
+      messagingSenderId: "1098381056692",
+      appId: "1:1098381056692:web:fb4dc43ce51fb21109d5e1",
+      measurementId: "G-H5GKBGPSEY",
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+    const loginForm = document.getElementById("form");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = emailInput.value;
+      const password = passwordInput.value;
+
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          alert("Login successful!");
+
+          window.location.href = "{{ url_for('home') }}";
+        })
+        .catch((error) => {
+          alert("Error: " + error.message);
+        });
+    });
+  </script>
+</html>
