@@ -9,7 +9,7 @@ click==8.1.7
 colorama==0.4.6
 cryptography==41.0.7
 Deprecated==1.2.14
-flask==3.0.0
+Flask==3.0.0
 flatbuffers==23.5.26
 gast==0.5.4
 gcloud==0.18.3
