@@ -47,7 +47,7 @@ Our sophisticated solution involves a robust system that processes images throug
 2. Continuous refinement of machine learning algorithms for improved accuracy.
 3. Inclusion of real-time collaboration features in the research repository.
 
-### Dataset Link: [Ayurvedic Medicinal Plants and Leaf Segments Images]([https://www.kaggle.com/datasets/dhiraajkv/ayurvedic-medicinal-plants-and-leaf-segments-images](https://huggingface.co/datasets/PROFESSOR-DJ/Indian_Medicinal_Plants_and_Leaf_Dataset_Large))
+### Dataset Link: [Ayurvedic Medicinal Plants and Leaf Segments Images](https://huggingface.co/datasets/PROFESSOR-DJ/Indian_Medicinal_Plants_and_Leaf_Dataset_Large)
 
 ### Conclusion:
 The Identification of Medicinal Plants/Raw Materials through Image Processing Using Machine Learning project is a powerful tool in the field of MedTech/BioTech/HealthTech. Its potential applications in Ayurvedic research, pharmaceuticals, and collaborative learning make it a valuable asset for professionals and enthusiasts alike.
